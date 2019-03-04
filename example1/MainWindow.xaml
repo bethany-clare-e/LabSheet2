@@ -7,6 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Content="Click Here"
+                Grid.Row="0"
+                Grid.Column="0"/>
+
+        <StackPanel Grid.Column="3" Grid.Row="2"
+                    Grid.RowSpan="2"
+                    Orientation="Vertical">
+            <Button Content="OK" Margin="10" Height="25"/>
+            <Button Content="OK" Margin="10" Height="25"/>
+            <Button Content="OK" Margin="10" Height="25"/>
+           
+        </StackPanel>
     </Grid>
+
+   
 </Window>
