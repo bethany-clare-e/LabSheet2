@@ -9,10 +9,8 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -21,18 +19,28 @@
            
         </Grid.ColumnDefinitions>
 
-        <Image Source="assets\rock.png" VerticalAlignment="center" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0"/>
-        <RadioButton Content="Rock" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" />
-        <Image Source="assets\pop.png" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left"/>
-        <RadioButton Content="Pop" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" />
-        <Image Source="assets\disco.png" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left"/>
-        <RadioButton Content="Disco" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" />
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+            <Image Source="assets\rock.png" Height="50" />
+            <RadioButton Content="Rock" VerticalAlignment="Center"/>
+        </StackPanel>
+        
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+            <Image Source="assets\pop.png" Height="50" Margin="10"/>
+            <RadioButton Content="Pop"  VerticalAlignment="Center" />
+        </StackPanel>
 
-        <ListBox Background="HotPink" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="2" Width="400" Height="300"/>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="2" Orientation="Horizontal">
+            <Image Source="assets\disco.png" Height="50" Margin="10"/>
+            <RadioButton Content="Disco"  VerticalAlignment="Center" />
+        </StackPanel>
 
-        <Button Content="Button1" Grid.Row="1" Grid.Column="2" Width="200" Height="50"/>
-        <Button Content="Button2" Grid.Row="2" Grid.Column="2" Width="200" Height="50"/>
-        <Button Content="Button3" Grid.Row="3" Grid.Column="2" Width="200" Height="50"/>
-        <Button Content="Button4" Grid.Row="4" Grid.Column="2" Width="200" Height="50"/>
+        <ListBox Background="HotPink" Grid.Row="1" Grid.ColumnSpan="2" Margin="10"/>
+
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="2">
+            <Button Content="Button1" Margin="10,25" Width="200" Height="35"/>
+            <Button Content="Button2" Margin="10,25" Width="200" Height="35"/>
+            <Button Content="Button3" Margin="10,25" Width="200" Height="35"/>
+            <Button Content="Button4" Margin="10,25" Width="200" Height="35"/>
+        </StackPanel>
     </Grid>
 </Window>
